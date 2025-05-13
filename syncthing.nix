@@ -17,21 +17,21 @@
         };
       };
       folders = {
-		"Books" = {
-			id = "5psqh-grms2";
-			path = "~/Books";
-			devices = [ "oneplus12r" ];
-		};
-		"Music" = {
-			id = "Music";
-			path = "~/Music";
-			devices = [ "oneplus12r" ];
-		};
-		"notes" = {
-			id = "notes";
-			path = "~/notes";
-			devices = [ "oneplus12r" ];
-		};
+        "Books" = {
+          id = "5psqh-grms2";
+          path = "~/Books";
+          devices = [ "oneplus12r" ];
+        };
+        "Music" = {
+          id = "Music";
+          path = "~/Music";
+          devices = [ "oneplus12r" ];
+        };
+        "notes" = {
+          id = "notes";
+          path = "~/notes";
+          devices = [ "oneplus12r" ];
+        };
       };
     };
   };
