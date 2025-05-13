@@ -112,12 +112,14 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
+	  direnv
     discord
     fastfetch
     git
     htop
     neovim
     nixfmt-rfc-style
+	  nix-direnv
     obsidian
     pkgs.gnome-tweaks
     qbittorrent-enhanced
