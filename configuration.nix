@@ -124,6 +124,7 @@
     pkgs.gnome-tweaks
     qbittorrent-enhanced
     spotify
+    unzip
     vim
     vscode
     wget
