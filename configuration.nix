@@ -115,6 +115,7 @@
 	  direnv
     discord
     fastfetch
+    file
     git
     htop
     neovim
@@ -124,6 +125,7 @@
     pkgs.gnome-tweaks
     qbittorrent-enhanced
     spotify
+    tree
     unzip
     vim
     vscode
