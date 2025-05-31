@@ -119,6 +119,7 @@ in
     discord
     fastfetch
     file
+    flac
     git
     htop
     neovim
