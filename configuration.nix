@@ -132,6 +132,7 @@ in
     tree
     unzip
     vim
+    vlc
     vscode
     wget
   ] ++ jvmPackages;
