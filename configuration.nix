@@ -6,6 +6,7 @@
 
 let
   jvmPackages = import ./jvmdev.nix { inherit pkgs; };
+  unstable = import <nixos-unstable> { config = { allowUnfree = true; }; };
 in
 {
   imports = [
@@ -75,7 +76,7 @@ in
     alsa.support32Bit = true;
     pulse.enable = true;
     # If you want to use JACK applications, uncomment this
-    #jack.enable = true;
+    # jack.enable = true;
 
     # use the example session manager (no others are packaged yet so this is enabled by default,
     # no need to redefine it in your config for now)
@@ -115,6 +116,7 @@ in
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
+    dig
 	  direnv
     discord
     fastfetch
@@ -122,6 +124,7 @@ in
     flac
     git
     htop
+    libreoffice-qt6-fresh
     neovim
     nixfmt-rfc-style
 	  nix-direnv
@@ -135,6 +138,8 @@ in
     vlc
     vscode
     wget
+    unstable.rmpc
+    unstable.mpd
   ] ++ jvmPackages;
 
   # Some programs need SUID wrappers, can be configured further or are
