@@ -99,6 +99,11 @@ in
     ];
   };
 
+  nix.settings.trusted-users = [
+    "root"
+    "colm"  # idc, I own this computer
+  ];
+
   nix.settings.experimental-features = [
     "nix-command"
     "flakes"
