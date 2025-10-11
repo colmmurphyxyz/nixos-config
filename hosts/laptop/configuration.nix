@@ -5,15 +5,10 @@
 { config, pkgs, ... }:
 
 let
-  jvmPackages = import ./jvmdev.nix { inherit pkgs; };
   unstable = import <nixos-unstable> { config = { allowUnfree = true; }; };
 in
 {
   imports = [
-    # Include the results of the hardware scan.
-    ./hardware-configuration.nix
-    ./syncthing.nix
-    ./steam.nix
   ];
 
   # Bootloader.
@@ -29,12 +24,6 @@ in
 
   # Enable networking
   networking.networkmanager.enable = true;
-
-  # Set your time zone.
-  time.timeZone = "Europe/Dublin";
-
-  # Select internationalisation properties.
-  i18n.defaultLocale = "en_GB.UTF-8";
 
   i18n.extraLocaleSettings = {
     LC_ADDRESS = "en_IE.UTF-8";
@@ -104,48 +93,26 @@ in
     "colm"  # idc, I own this computer
   ];
 
-  nix.settings.experimental-features = [
-    "nix-command"
-    "flakes"
-  ];
-
   programs.appimage.enable = true;
   programs.appimage.binfmt = true;
 
   # Install firefox.
   programs.firefox.enable = true;
 
-  # Allow unfree packages
-  nixpkgs.config.allowUnfree = true;
-
-  # List packages installed in system profile. To search, run:
-  # $ nix search wget
   environment.systemPackages = with pkgs; [
-    dig
-	  direnv
     discord
-    fastfetch
-    file
     flac
-    git
-    htop
     libreoffice-qt6-fresh
-    neovim
     nixfmt-rfc-style
-	  nix-direnv
     obsidian
     pkgs.gnome-tweaks
     qbittorrent-enhanced
     spotify
-    tree
-    unzip
-    vim
     vlc
     vscode
-    wget
     unstable.rmpc
     unstable.mpd
-  ] ++ jvmPackages;
+  ];
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
