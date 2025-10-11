@@ -1,0 +1,35 @@
+{
+  description = "NixOS Config";
+
+  inputs = {
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.05";
+  };
+
+  outputs = { self, nixpkgs, ...}@inputs: {
+    nixosConfigurations = {
+      laptop = nixpkgs.lib.nixosSystem {
+        system = "x86_64-linux";
+        modules = [
+          ./hosts/laptop/laptop.nix
+          ./hosts/laptop/configuration.nix
+          ./hosts/laptop/hardware-configuration.nix
+          ./modules/common.nix
+          ./modules/jvmdev.nix
+          ./modules/steam.nix
+          ./modules/syncthing.nix
+        ];
+      };
+
+      wsl = nixpkgs.lib.nixosSystem {
+        system = "x86_64-linux";
+        modules = [
+          ./hosts/wsl/wsl.nix
+          ./hosts/wsl/configuration.nix
+          ./modules/common.nix
+          ./modules/jvmdev.nix
+        ];
+      };
+    };
+  };
+}
+
