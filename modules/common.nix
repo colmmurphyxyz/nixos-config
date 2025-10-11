@@ -43,4 +43,8 @@
   };
 
   nixpkgs.config.allowUnfree = true;
+
+  imports = [
+    ./git.nix
+  ];
 }
