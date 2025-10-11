@@ -29,7 +29,6 @@
     nix-direnv
     tree
     unzip
-    wget
     vim
     wget
   ];
