@@ -16,17 +16,7 @@
   wsl.enable = true;
   wsl.defaultUser = "nixos";
 
-  nixpkgs.config.allowUnfree = true;
-
   environment.systemPackages = with pkgs; [
-    git
-    neovim
-    wget
-  ];
-
-  nix.settings.experimental-features = [
-    "nix-command"
-    "flakes"
   ];
 
   # This value determines the NixOS release from which the default
