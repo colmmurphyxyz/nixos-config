@@ -14,7 +14,6 @@
           ./hosts/laptop/configuration.nix
           ./hosts/laptop/hardware-configuration.nix
           ./modules/common.nix
-          ./modules/jvmdev.nix
           ./modules/steam.nix
           ./modules/syncthing.nix
         ];
@@ -26,7 +25,6 @@
           ./hosts/wsl/wsl.nix
           ./hosts/wsl/configuration.nix
           ./modules/common.nix
-          ./modules/jvmdev.nix
         ];
       };
     };
