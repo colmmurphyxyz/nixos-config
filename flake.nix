@@ -14,18 +14,21 @@
           ./hosts/laptop/configuration.nix
           ./hosts/laptop/hardware-configuration.nix
           ./modules/common.nix
+          ./modules/git.nix
           ./modules/steam.nix
           ./modules/syncthing.nix
         ];
       };
 
-      pc = nixpkgs.lib.nixosSysten {
+      pc = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         modules = [
           ./hosts/pc/pc.nix
           ./hosts/pc/configuration.nix
           ./hosts/pc/hardware-configuration.nix
           ./modules/common.nix
+          ./modules/git.nix
+          ./modules/nvidia.nix
           ./modules/steam.nix
         ];
       };
@@ -36,6 +39,7 @@
           ./hosts/wsl/wsl.nix
           ./hosts/wsl/configuration.nix
           ./modules/common.nix
+          ./modules/git.nix
         ];
       };
     };
