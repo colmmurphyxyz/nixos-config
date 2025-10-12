@@ -19,6 +19,17 @@
         ];
       };
 
+      pc = nixpkgs.lib.nixosSysten {
+        system = "x86_64-linux";
+        modules = [
+          ./hosts/pc/pc.nix
+          ./hosts/pc/configuration.nix
+          ./hosts/pc/hardware-configuration.nix
+          ./modules/common.nix
+          ./modules/steam.nix
+        ];
+      };
+
       wsl = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         modules = [
