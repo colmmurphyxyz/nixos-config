@@ -15,6 +15,7 @@
           ./hosts/laptop/hardware-configuration.nix
           ./modules/common.nix
           ./modules/git.nix
+          ./modules/htop.nix
           ./modules/steam.nix
           ./modules/syncthing.nix
         ];
@@ -28,6 +29,7 @@
           ./hosts/pc/hardware-configuration.nix
           ./modules/common.nix
           ./modules/git.nix
+          ./modules/htop.nix
           ./modules/nvidia.nix
           ./modules/steam.nix
         ];
@@ -40,6 +42,7 @@
           ./hosts/wsl/configuration.nix
           ./modules/common.nix
           ./modules/git.nix
+          ./modules/htop.nix
         ];
       };
     };
