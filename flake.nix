@@ -5,6 +5,7 @@
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.05";
   };
 
+  # deployable via `sudo nixos-rebuild switch --flake .#pc` etc...
   outputs = { self, nixpkgs, ...}@inputs: {
     nixosConfigurations = {
       laptop = nixpkgs.lib.nixosSystem {

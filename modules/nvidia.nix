@@ -1,3 +1,8 @@
+# Notes to self.
+# inxi -G to show graphics card info e.g. current driver
+# xset -dpms to prevent screen blanking after ~30 seconds inactivity
+# (sudo) nvidia-settings to adjust GPU settings
+
 { config, lib, pkgs, ... }:
 {
   # https://nixos.wiki/wiki/Nvidia
