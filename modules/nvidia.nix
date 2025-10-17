@@ -40,6 +40,9 @@
 
   environment.systemPackages = with pkgs; [
     config.boot.kernelPackages.nvidiaPackages.stable
+    # For debugging
+    pciutils
+    inxi
   ];
 
   boot.blacklistedKernelModules = [ "nouveau" ];
