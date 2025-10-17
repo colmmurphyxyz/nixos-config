@@ -25,6 +25,7 @@
     git
     htop
     neovim
+    nixd
     nixfmt-rfc-style
     nix-direnv
     tree
