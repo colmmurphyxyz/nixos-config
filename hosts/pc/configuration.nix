@@ -8,6 +8,7 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
+      ./main-user.nix
     ];
 
   # Bootloader.
@@ -59,7 +60,6 @@
     #media-session.enable = true;
   };
 
-  # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.colm = {
     isNormalUser = true;
     description = "Colm Murphy";
