@@ -60,6 +60,11 @@
             ./modules/htop.nix
             ./modules/nvidia.nix
             ./modules/steam.nix
+            home-manager.nixosModules.home-manager
+            {
+              home-manager.users.colm = ./hosts/pc/home.nix;
+              extraSpecialArgs = { inherit inputs outputs; };
+            }
           ];
           specialArgs = { inherit inputs; };
         };
@@ -75,13 +80,5 @@
           ];
         };
       };
-
-      # homeConfigurations = {
-      #   "colm@leo" = lib.homeManagerConfigurations {
-      #     modules = [];
-      #     pkgs = pkgsFor.x86_64-linux;
-      #     extraSpecialArgs = { inherit inputs outputs; };
-      #   };
-      # };
     };
 }

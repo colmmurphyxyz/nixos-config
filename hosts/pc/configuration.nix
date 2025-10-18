@@ -71,12 +71,6 @@
     ];
   };
 
-  home-manager = {
-    extraSpecialArgs = { inherit inputs; };
-    users = {
-      "colm" = import ./home.nix;
-    };
-  };
 
   # Install firefox.
   programs.firefox.enable = true;
