@@ -62,8 +62,10 @@
             ./modules/steam.nix
             home-manager.nixosModules.home-manager
             {
-              home-manager.users.colm = ./hosts/pc/home.nix;
-              extraSpecialArgs = { inherit inputs outputs; };
+              home-manager.useGlobalPkgs = true;
+              home-manager.useUserPackages = true;
+              home-manager.users.colm = ./home/colm/pc-leo.nix;
+              home-manager.extraSpecialArgs = { inherit inputs outputs; };
             }
           ];
           specialArgs = { inherit inputs; };
