@@ -36,7 +36,7 @@
     # '')
   ];
 
-  home.file."mydir/myfile.text" = ''
+  home.file."mydir/myfile".text = ''
     This is a test file
   '';
 

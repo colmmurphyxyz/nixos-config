@@ -60,9 +60,8 @@
             ./modules/htop.nix
             ./modules/nvidia.nix
             ./modules/steam.nix
-            inputs.home-manager.nixosModules.default
           ];
-          extraSpecialArgs = { inherit inputs outputs; };
+          specialArgs = { inherit inputs; };
         };
 
         wsl = nixpkgs.lib.nixosSystem {
@@ -77,14 +76,12 @@
         };
       };
 
-      homeConfigurations = {
-        "colm@leo" = lib.homeManagerConfigurations {
-          modules = [
-            ./home/colm/pc.nix
-          ];
-          pkgs = pkgsFor.x86_64-linux;
-          extraSpecialArgs = { inherit inputs outputs; };
-        };
-      };
+      # homeConfigurations = {
+      #   "colm@leo" = lib.homeManagerConfigurations {
+      #     modules = [];
+      #     pkgs = pkgsFor.x86_64-linux;
+      #     extraSpecialArgs = { inherit inputs outputs; };
+      #   };
+      # };
     };
 }
