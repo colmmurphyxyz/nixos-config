@@ -1,6 +1,7 @@
 { config, pkgs, ... }:
 {
   imports = [
+    ./features/bash
     ./features/git.nix
   ];
   programs.home-manager.enable = true;
