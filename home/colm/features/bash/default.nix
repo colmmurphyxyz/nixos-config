@@ -5,7 +5,7 @@
     bashrcExtra = ''
       eval "$(direnv hook bash)"
 
-      export $EDITOR=nvim;
+      export EDITOR=nvim;
       alias ls='ls -alh';
       alias cls='clear';
     '';
