@@ -3,10 +3,11 @@
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.05";
+    nixpkgs-24-11.url = "github:NixOS/nixpkgs/nixos-24.11";
     nixpkgs-unstable.url = "github:NixOS/nixpkgs/nixos-unstable";
 
     home-manager = {
-      url = "github:nix-community/home-manager/master";
+      url = "github:nix-community/home-manager/release-25.05";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
@@ -54,6 +55,7 @@
               home-manager.extraSpecialArgs = { inherit inputs outputs; };
             }
           ];
+          specialArgs = { inherit inputs; };
         };
 
         pc = nixpkgs.lib.nixosSystem {
