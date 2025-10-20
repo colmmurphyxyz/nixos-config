@@ -7,9 +7,9 @@
 
   prgrams.gnupg = {
     enable = true;
-    agent = {
-      enable = true;
-      pinentryPackage = pkgs.pinentry-all;
-    };
+    # agent = {
+    #   enable = true;
+    #   pinentryPackage = pkgs.pinentry-all;
+    # };
   };
 }
