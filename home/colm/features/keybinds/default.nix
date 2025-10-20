@@ -27,7 +27,7 @@
     "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/open-terminal" = {
       name = "Open Terminal";
       command = "kgx";
-      binding = "<Ctrl><Alt>t";
+      binding = "<Super>t";
     };
     "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/screenshot-area" = {
       name = "Take Area Screenshot";
