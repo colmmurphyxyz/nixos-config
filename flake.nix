@@ -66,6 +66,7 @@
             ./hosts/pc/hardware-configuration.nix
             ./modules/common.nix
             ./modules/git.nix
+            ./modules/gnupg.git
             ./modules/htop.nix
             ./modules/nvidia.nix
             ./modules/steam.nix
