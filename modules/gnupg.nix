@@ -5,11 +5,8 @@
     pinentry-all
   ];
 
-  prgrams.gnupg = {
+  programs.gnupg.agent = {
     enable = true;
-    # agent = {
-    #   enable = true;
-    #   pinentryPackage = pkgs.pinentry-all;
-    # };
+    pinentryPackage = pkgs.pinentry-all;
   };
 }
