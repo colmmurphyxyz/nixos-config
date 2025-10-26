@@ -14,7 +14,11 @@
   ];
 
   wsl.enable = true;
-  wsl.defaultUser = "nixos";
+  wsl.defaultUser = "colm";
+
+  networking.hostName = "nixos-wsl";
+
+  programs.nix-ld.enable = true;
 
   environment.systemPackages = with pkgs; [
   ];

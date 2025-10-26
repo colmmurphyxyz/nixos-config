@@ -88,6 +88,7 @@
             ./hosts/wsl/configuration.nix
             ./modules/common.nix
             ./modules/git.nix
+            ./modules/gnupg.nix
             ./modules/htop.nix
           ];
         };
