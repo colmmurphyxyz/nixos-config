@@ -90,7 +90,15 @@
             ./modules/git.nix
             ./modules/gnupg.nix
             ./modules/htop.nix
+            home-manager.nixosModules.home-manager
+            {
+              home-manager.useGlobalPkgs = true;
+              home-manager.useUserPackages = true;
+              home-manager.users.colm = ./home/colm/nixos-wsl.nix;
+              home-manager.extraSpecialArgs = { inherit inputs outputs; };
+            }
           ];
+          specialArgs = { inherit inputs; };
         };
       };
     };
