@@ -44,6 +44,7 @@
             ./hosts/laptop/hardware-configuration.nix
             ./modules/common.nix
             ./modules/git.nix
+            ./modules/gnupg.nix
             ./modules/htop.nix
             ./modules/steam.nix
             ./modules/syncthing.nix
