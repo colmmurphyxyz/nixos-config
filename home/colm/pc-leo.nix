@@ -1,7 +1,6 @@
 { config, pkgs, ... }:
 {
   imports = [
-    ./features/bash
     ./features/git.nix
     ./features/htop.nix
     ./features/keybinds
@@ -39,8 +38,21 @@
     # '')
   ];
 
-  home.file."mydir/myfile".text = ''
-    This is a test file
+  programs.bash = {
+    enable = true;
+    bashrcExtra = ''
+      eval "$(direnv hook bash)"
+
+      export EDITOR=nvim;
+      alias ls='ls -alh';
+      alias cls='clear';
+    '';
+  };
+
+  home.file.".bash_profile".text = ''
+      [[ -f ~/.bashrc ]] && source ~/.bashrc
+
+      xset -dpms
   '';
 
   # Home Manager can also manage your environment variables through
