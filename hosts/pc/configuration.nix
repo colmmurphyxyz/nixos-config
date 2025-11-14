@@ -85,6 +85,7 @@
     nixfmt-rfc-style
     obsidian
     pkgs.gnome-tweaks
+    qbittorrent
     spotify
     vlc
     vscode
