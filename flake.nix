@@ -75,6 +75,7 @@
             {
               home-manager.useGlobalPkgs = true;
               home-manager.useUserPackages = true;
+              home-manager.backupFileExtension = "backup";
               home-manager.users.colm = ./home/colm/pc-leo.nix;
               home-manager.extraSpecialArgs = { inherit inputs outputs; };
             }
