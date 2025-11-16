@@ -4,6 +4,7 @@
     ./features/git.nix
     ./features/htop.nix
     ./features/keybinds
+    ./features/vscode
   ];
   programs.home-manager.enable = true;
 
@@ -50,7 +51,11 @@
   };
 
   home.file.".bash_profile".text = ''
-      [[ -f ~/.bashrc ]] && source ~/.bashrc
+      # include .profile if it exists
+      [[ -f ~/.profile ]] && . ~/.profile
+
+      # include .bashrc if it exists
+      [[ -f ~/.bashrc ]] && . ~/.bashrc
 
       xset -dpms
   '';
