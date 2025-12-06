@@ -13,8 +13,8 @@
 
   home.stateVersion = "24.11";
 
-  home.packages = [
-
+  home.packages = with pkgs; [
+    jetbrains.idea-community
   ];
 
   home.sessionVariables = {
