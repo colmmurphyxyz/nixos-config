@@ -20,9 +20,11 @@
     curl
     dig
     direnv
+    f3
     fastfetch
     file
     git
+    gparted
     htop
     neovim
     nixd
