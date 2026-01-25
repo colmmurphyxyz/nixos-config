@@ -106,7 +106,7 @@
 
       homeConfigurations = {
         daisy = home-manager-25-11.lib.homeManagerConfiguration {
-          pkgs = nixpkgs.legacyPackages.x86_64-linux;
+          pkgs = nixpkgs-25-11.legacyPackages.x86_64-linux;
           modules = [ ./home/colm/daisy-ubuntu-server.nix ];
         };
       };
