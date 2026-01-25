@@ -24,7 +24,7 @@
 
   programs.bash = {
     enable = true;
-    bashrcExtra = builtins.readFile ./features/bash/daisy-bashrc-extra.sh
+    bashrcExtra = builtins.readFile ./features/bash/daisy-bashrc-extra.sh;
   };
 
   home.file.".bash_profile".text = ''
