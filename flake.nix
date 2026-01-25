@@ -4,10 +4,16 @@
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.05";
     nixpkgs-24-11.url = "github:NixOS/nixpkgs/nixos-24.11";
+    nixpkgs-25-11.url = "github:NixOS/nixpkgs/nixos-25.11";
     nixpkgs-unstable.url = "github:NixOS/nixpkgs/nixos-unstable";
 
     home-manager = {
       url = "github:nix-community/home-manager/release-25.05";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    
+    home-manager-25-11 = {
+      url = "github:nix-community/home-manager/release-25.11";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
@@ -17,7 +23,9 @@
     {
       self,
       nixpkgs,
+      nixpkgs-25-11,
       home-manager,
+      home-manager-25-11,
       ...
     }@inputs:
     let
@@ -48,7 +56,7 @@
             ./modules/htop.nix
             ./modules/steam.nix
             ./modules/syncthing.nix
-            home-manager.nixosModules.home-manager
+            home-manager-25-11.nixosModules.home-manager
             {
               home-manager.useGlobalPkgs = true;
               home-manager.useUserPackages = true;
@@ -59,7 +67,7 @@
           specialArgs = { inherit inputs; };
         };
 
-        pc = nixpkgs.lib.nixosSystem {
+        pc = nixpkgs-25-11.lib.nixosSystem {
           system = "x86_64-linux";
           modules = [
             ./hosts/pc/pc.nix
