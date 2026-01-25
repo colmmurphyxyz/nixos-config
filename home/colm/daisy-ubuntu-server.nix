@@ -53,5 +53,6 @@
   #
   home.sessionVariables = {
     EDITOR = "nvim";
+    GPG_TTY = "$(tty)";
   };
 }
