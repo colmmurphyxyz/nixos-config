@@ -56,7 +56,7 @@
             ./modules/htop.nix
             ./modules/steam.nix
             ./modules/syncthing.nix
-            home-manager-25-11.nixosModules.home-manager
+            home-manager.nixosModules.home-manager
             {
               home-manager.useGlobalPkgs = true;
               home-manager.useUserPackages = true;
@@ -79,7 +79,7 @@
             ./modules/htop.nix
             ./modules/nvidia.nix
             ./modules/steam.nix
-            home-manager.nixosModules.home-manager
+            home-manager-25-11.nixosModules.home-manager
             {
               home-manager.useGlobalPkgs = true;
               home-manager.useUserPackages = true;
