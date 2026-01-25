@@ -24,6 +24,7 @@ in
     profiles.default.userSettings = {
       "workbench.colorTheme" = "Darcula";
       "[nix]"."editor.tabSize" = 2;
+      "git.confirmSync" = false;
     };
   };
 }
