@@ -11,7 +11,7 @@
       url = "github:nix-community/home-manager/release-25.05";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    
+
     home-manager-25-11 = {
       url = "github:nix-community/home-manager/release-25.11";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -101,6 +101,13 @@
             ./modules/gnupg.nix
             ./modules/htop.nix
           ];
+        };
+      };
+
+      homeConfigurations = {
+        daisy = home-manager-25-11.lib.homeManagerConfiguration {
+          pkgs = nixpkgs.legacyPackages.x86_64-linux;
+          modules = [ ./home/colm/daisy-ubuntu-server.nix ];
         };
       };
     };
