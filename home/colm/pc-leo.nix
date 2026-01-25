@@ -30,7 +30,6 @@
       eval "$(direnv hook bash)"
 
       export EDITOR=nvim;
-      alias ls='ls -alh';
       alias cls='clear';
     '';
   };
