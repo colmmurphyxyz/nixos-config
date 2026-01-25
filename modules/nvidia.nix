@@ -7,7 +7,6 @@
 {
   # https://nixos.wiki/wiki/Nvidia
 
-  hardware.opengl.enable = true;
   hardware.graphics.enable = true;
 
   # Load nvidia driver for Xorg and Wayland
