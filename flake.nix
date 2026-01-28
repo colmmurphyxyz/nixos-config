@@ -16,6 +16,8 @@
       url = "github:nix-community/home-manager/release-25.11";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    colmmurphyxyz-backend.url = "github:colmmurphyxyz/colmmurphy-xyz-backend/nix/build";
   };
 
   # deployable via `sudo nixos-rebuild switch --flake .#pc` etc...

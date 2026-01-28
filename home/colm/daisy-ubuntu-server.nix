@@ -1,6 +1,7 @@
 { config, pkgs, ... }:
 {
   imports = [
+    ./features/colmmurphyxyz-backend
     ./features/git.nix
     ./features/htop.nix
   ];
