@@ -11,11 +11,13 @@
       url = "github:nix-community/home-manager/release-25.05";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    
+
     home-manager-25-11 = {
       url = "github:nix-community/home-manager/release-25.11";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    colmmurphyxyz-backend.url = "github:colmmurphyxyz/colmmurphy-xyz-backend";
   };
 
   # deployable via `sudo nixos-rebuild switch --flake .#pc` etc...
@@ -101,6 +103,14 @@
             ./modules/gnupg.nix
             ./modules/htop.nix
           ];
+        };
+      };
+
+      homeConfigurations = {
+        "daisy-ubuntu-server" = home-manager-25-11.lib.homeManagerConfiguration {
+          pkgs = nixpkgs-25-11.legacyPackages.x86_64-linux;
+          modules = [ ./home/colm/daisy-ubuntu-server.nix ];
+          extraSpecialArgs = { inherit inputs outputs; };
         };
       };
     };
