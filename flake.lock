@@ -27,16 +27,15 @@
         "nixpkgs": "nixpkgs_2"
       },
       "locked": {
-        "lastModified": 1769630978,
+        "lastModified": 1769634301,
         "narHash": "sha256-UBXwn774QJjPsDQWsU9PHtY8/burfJgLeXYbk994xYo=",
         "owner": "colmmurphyxyz",
         "repo": "colmmurphy-xyz-backend",
-        "rev": "1449f5db28903b77ba689b61e713028f2c0dca5a",
+        "rev": "cc70cbbb504fee0d78ff4eaf062a31be59c364ea",
         "type": "github"
       },
       "original": {
         "owner": "colmmurphyxyz",
-        "ref": "nix/build",
         "repo": "colmmurphy-xyz-backend",
         "type": "github"
       }
