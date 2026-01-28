@@ -17,7 +17,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    colmmurphyxyz-backend.url = "github:colmmurphyxyz/colmmurphy-xyz-backend/nix/build";
+    colmmurphyxyz-backend.url = "github:colmmurphyxyz/colmmurphy-xyz-backend";
   };
 
   # deployable via `sudo nixos-rebuild switch --flake .#pc` etc...
