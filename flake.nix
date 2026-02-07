@@ -75,6 +75,7 @@
             ./hosts/pc/pc.nix
             ./hosts/pc/configuration.nix
             ./hosts/pc/hardware-configuration.nix
+            ./hosts/pc/syncthing.nix
             ./modules/common.nix
             ./modules/git.nix
             ./modules/gnupg.nix
