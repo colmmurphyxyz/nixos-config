@@ -46,7 +46,7 @@
       inherit lib;
       homeManagerModules = import ./modules/home-manager;
       nixosConfigurations = {
-        laptop = nixpkgs.lib.nixosSystem {
+        laptop = nixpkgs-25-11.lib.nixosSystem {
           system = "x86_64-linux";
           modules = [
             ./hosts/laptop/laptop.nix
@@ -58,7 +58,7 @@
             ./modules/htop.nix
             ./modules/steam.nix
             ./modules/syncthing.nix
-            home-manager.nixosModules.home-manager
+            home-manager-25-11.nixosModules.home-manager
             {
               home-manager.useGlobalPkgs = true;
               home-manager.useUserPackages = true;
