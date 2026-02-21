@@ -20,6 +20,7 @@
 
   home.packages = with pkgs; [
     fastfetch
+    neovim
   ];
 
   programs.bash = {
