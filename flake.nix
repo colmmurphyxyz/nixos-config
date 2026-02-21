@@ -113,6 +113,11 @@
           modules = [ ./home/colm/daisy-ubuntu-server.nix ];
           extraSpecialArgs = { inherit inputs outputs; };
         };
+        "mary" = home-manager-25-11.lib.homeManagerConfiguration {
+          pkgs = nixpkgs-25-11.legacyPackages.aarch64-linux;
+          modules = [ ./home/mary/mary.nix ];
+          extraSpecialArgs = { inherit inputs outputs; };
+        };
       };
     };
 }
