@@ -15,7 +15,8 @@
 
   home.packages = with pkgs; [
     caligula
-    jetbrains.idea-community
+    lunar-client
+    jetbrains.idea
   ];
 
   home.sessionVariables = {
