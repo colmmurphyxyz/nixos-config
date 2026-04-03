@@ -64,6 +64,7 @@
     isNormalUser = true;
     description = "Colm Murphy";
     extraGroups = [
+      "libvirtd"
       "networkmanager"
       "wheel"
     ];
@@ -78,8 +79,12 @@
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
+  virtualisation.libvirtd.enable = true;
+  programs.virt-manager.enable = true;
+
   environment.systemPackages = with pkgs; [
     discord
+    dnsmasq
     flac
     libreoffice-qt6-fresh
     nixfmt-rfc-style
