@@ -1,7 +1,6 @@
 { config, pkgs, ... }:
 {
   home.packages = with pkgs; [
-    gnome-screenshot
     xdotool
   ];
 
@@ -28,11 +27,6 @@
       name = "Open Terminal";
       command = "kgx";
       binding = "<Super>t";
-    };
-    "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/screenshot-area" = {
-      name = "Take Area Screenshot";
-      command = "gnome-screenshot -a";
-      binding = "<Super><Shift>S";
     };
   };
 }
