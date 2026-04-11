@@ -41,8 +41,6 @@
 
       # include .bashrc if it exists
       [[ -f ~/.bashrc ]] && . ~/.bashrc
-
-      xset -dpms
   '';
 
   # Home Manager can also manage your environment variables through
