@@ -15,6 +15,7 @@
 
   home.packages = with pkgs; [
     caligula
+    foliate
     lunar-client
     jetbrains.idea
   ];
