@@ -90,7 +90,7 @@
     dnsmasq
     flac
     libreoffice-qt6-fresh
-    nixfmt-rfc-style
+    nixfmt
     obsidian
     pkgs.gnome-tweaks
     qbittorrent

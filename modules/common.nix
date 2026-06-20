@@ -28,7 +28,7 @@
     htop
     neovim
     nixd
-    nixfmt-rfc-style
+    nixfmt
     nix-direnv
     tree
     unzip
