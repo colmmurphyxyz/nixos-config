@@ -5,6 +5,7 @@
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.05";
     nixpkgs-24-11.url = "github:NixOS/nixpkgs/nixos-24.11";
     nixpkgs-25-11.url = "github:NixOS/nixpkgs/nixos-25.11";
+    nixpkgs-26-05.url = "github:NixOS/nixpkgs/nixos-26.05";
     nixpkgs-unstable.url = "github:NixOS/nixpkgs/nixos-unstable";
 
     home-manager = {
@@ -17,6 +18,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    home-manager-26-05 = {
+      url = "github:nix-community/home-manager/release-26.05";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     colmmurphyxyz-backend.url = "github:colmmurphyxyz/colmmurphy-xyz-backend";
   };
 
@@ -26,27 +32,21 @@
       self,
       nixpkgs,
       nixpkgs-25-11,
+      nixpkgs-26-05,
       home-manager,
       home-manager-25-11,
+      home-manager-26-05,
       ...
     }@inputs:
     let
       inherit (self) outputs;
       lib = nixpkgs.lib // home-manager.lib;
-      systems = [ "x86_64-linux" ];
-      pkgsFor = lib.genAttrs systems (
-        system:
-        import nixpkgs {
-          inherit system;
-          config.allowUnfree = true;
-        }
-      );
     in
     {
       inherit lib;
       homeManagerModules = import ./modules/home-manager;
       nixosConfigurations = {
-        laptop = nixpkgs-25-11.lib.nixosSystem {
+        laptop = nixpkgs-26-05.lib.nixosSystem {
           system = "x86_64-linux";
           modules = [
             ./hosts/laptop/laptop.nix
@@ -58,7 +58,7 @@
             ./modules/htop.nix
             ./modules/steam.nix
             ./modules/syncthing.nix
-            home-manager-25-11.nixosModules.home-manager
+            home-manager-26-05.nixosModules.home-manager
             {
               home-manager.useGlobalPkgs = true;
               home-manager.useUserPackages = true;
