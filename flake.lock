@@ -80,27 +80,6 @@
         "type": "github"
       }
     },
-    "home-manager": {
-      "inputs": {
-        "nixpkgs": [
-          "nixpkgs"
-        ]
-      },
-      "locked": {
-        "lastModified": 1763992789,
-        "narHash": "sha256-WHkdBlw6oyxXIra/vQPYLtqY+3G8dUVZM8bEXk0t8x4=",
-        "owner": "nix-community",
-        "repo": "home-manager",
-        "rev": "44831a7eaba4360fb81f2acc5ea6de5fde90aaa3",
-        "type": "github"
-      },
-      "original": {
-        "owner": "nix-community",
-        "ref": "release-25.05",
-        "repo": "home-manager",
-        "type": "github"
-      }
-    },
     "home-manager-25-11": {
       "inputs": {
         "nixpkgs": [
@@ -258,7 +237,6 @@
     "root": {
       "inputs": {
         "colmmurphyxyz-backend": "colmmurphyxyz-backend",
-        "home-manager": "home-manager",
         "home-manager-25-11": "home-manager-25-11",
         "home-manager-26-05": "home-manager-26-05",
         "nixpkgs": "nixpkgs_3",
